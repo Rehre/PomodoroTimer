@@ -15,8 +15,24 @@
       "pre-commit": "lint-staged"
     }
   },
+  "lint-staged": {
+    "*.{js,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "author": "Akmal Maulana Azzam",
   "license": "MIT",
+  "dependencies": {
+    "node-notifier": "^6.0.0",
+    "prop-types": "15.7.2",
+    "react": "16.10.0",
+    "react-dom": "16.10.0"
+  },
   "devDependencies": {
     "@babel/core": "7.6.2",
     "@babel/preset-env": "7.6.2",
@@ -49,21 +65,5 @@
     "webpack-cli": "3.3.9",
     "webpack-config-utils": "2.3.1",
     "webpack-dev-server": "3.8.1"
-  },
-  "dependencies": {
-    "node-notifier": "^6.0.0",
-    "prop-types": "15.7.2",
-    "react": "16.10.0",
-    "react-dom": "16.10.0"
-  },
-  "lint-staged": {
-    "*.{js,css,json,md}": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
   }
 }
