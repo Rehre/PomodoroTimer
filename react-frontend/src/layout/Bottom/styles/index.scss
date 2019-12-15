@@ -1,0 +1,31 @@
+.bottom {
+  background-color: white;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.progressContainer {
+  position: relative;
+}
+
+.timerText {
+  margin: 0px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #6c5b7b;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.progressCircleBar {
+  transform: rotateZ(-90deg);
+  -webkit-transform: rotateZ(-90deg);
+  -moz-transform: rotateZ(-90deg);
+  -ms-transform: rotateZ(-90deg);
+  -o-transform: rotateZ(-90deg);
+}

@@ -3,15 +3,18 @@ import { render } from 'react-dom';
 
 import './styles/index.scss';
 import styles from './styles/index.scss.json';
+import Main from './layout';
 
-import Top from './layout/Top';
-import Bottom from './layout/Bottom';
+import { RootContextProvider } from './context/RootContext';
 
-const App = () => (
-  <div className={styles.app}>
-    <Top />
-    <Bottom />
-  </div>
-);
+const App = () => {
+  return (
+    <RootContextProvider>
+      <div className={styles.app}>
+        <Main />
+      </div>
+    </RootContextProvider>
+  );
+};
 
 render(<App />, document.getElementById('root'));

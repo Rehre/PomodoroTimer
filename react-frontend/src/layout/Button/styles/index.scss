@@ -1,0 +1,44 @@
+.button {
+  outline: none;
+  position: fixed;
+  background-color: #f8b195;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 1px 4px rgb(163, 162, 162);
+  color: white;
+  font-size: 16px;
+  top: 50%;
+  left: 50%;
+  width: 156px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #eba98f;
+}
+
+.button:active {
+  background-color: #f8b195;
+}
+
+.buttonStop {
+  background-color: #d06080;
+}
+
+.buttonStop:hover {
+  background-color: rgb(182, 86, 113);
+}
+
+.buttonStop:active {
+  background-color: #d06080;
+}
