@@ -3,12 +3,20 @@
   "version": "1.0.0",
   "description": "Pomodoro timer",
   "private": true,
-  "main": "./electron/main.js",
+  "main": "./main.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production electron .",
-    "dev-electron": "cross-env NODE_ENV=development electron .",
+    "start": "cross-env ELECTRON_IS_DEV=0 electron .",
+    "dev-electron": "cross-env ELECTRON_IS_DEV=1 electron .",
     "dev-react": "cross-env NODE_ENV=development webpack-dev-server",
-    "build-react": "cross-env NODE_ENV=production webpack"
+    "build-react": "cross-env NODE_ENV=production webpack",
+    "build-electron": "cross-env ELECTRON_IS_DEV=0 electron-builder"
+  },
+  "build": {
+    "appId": "com.akmal.pomodorotimer",
+    "files": [
+      "main.js",
+      "build"
+    ]
   },
   "husky": {
     "hooks": {
@@ -28,7 +36,8 @@
   "author": "Akmal Maulana Azzam",
   "license": "MIT",
   "dependencies": {
-    "node-notifier": "^6.0.0",
+    "electron-is-dev": "1.1.0",
+    "node-notifier": "6.0.0",
     "prop-types": "15.7.2",
     "react": "16.10.0",
     "react-dom": "16.10.0"
@@ -43,6 +52,7 @@
     "cross-env": "6.0.0",
     "css-loader": "3.2.0",
     "electron": "6.0.10",
+    "electron-builder": "21.2.0",
     "eslint": "6.1.0",
     "eslint-config-airbnb": "18.0.1",
     "eslint-config-prettier": "6.3.0",
