@@ -1,6 +1,6 @@
 {
   "name": "pomodorotimer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pomodoro timer",
   "private": true,
   "main": "./main.js",
